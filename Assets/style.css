@@ -1,0 +1,446 @@
+:root {
+    --light:#EDF5FC;
+    --dark: #272D2D;
+    --green: #23ce6b;
+    --grey: #b8c5d6;
+    --purple-grey: #a39ba8;
+}
+
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color:var(--purple-grey);
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+}
+.container {
+    max-width: 100%;
+}
+.navbar-container {
+    display: flex;
+    align-items: center;
+}
+/* Header styles and your customization  */
+header {
+    background-color: var(--dark);
+    color: var(--light);
+    text-align: left;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-content {
+    display: column;
+    align-items: flex-start;
+}
+.header-content h1 {
+    margin-bottom: 0;
+}
+.header-content p {
+    margin-top: 0;
+    color: var(--green);
+}
+
+/* This is me trying to make an invisible nav bar */
+#navMenu {
+    display: none;
+}
+
+#navMenu.active {
+    display: block;
+}
+.navbar-burger {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.navbar-container {
+    display: flex;
+    align-items: center;
+}
+.navbar-burger .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--light);
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+.navbar-burger.is-active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.navbar-burger.is-active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.navbar-burger.is-active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+
+nav ul.container {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    float: right;
+}
+
+nav ul.container li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul.container li a {
+    color: var(--light);
+    text-decoration: none;
+    font-weight: bold;
+}
+nav.active {
+    display: flex;
+}
+/* THIS IS THE MODAL THAT TOOK FOREVER BE CAREFUL! */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 2; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.4); 
+}
+  
+.blackout {
+    position: relative;
+    z-index: 1;
+    background-color: black;
+    transition: background-color linear 0.1s;
+}
+  
+.modal-content {
+    text-align: center;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+    background-color: #000;
+}
+  
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+  
+  .close:hover,
+  .close:focus {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+} 
+  
+.image {
+    width:120px;
+    height: 120px;
+    padding: 20px 50px;
+}
+  
+.flame {
+    filter: drop-shadow(0px 0px 4px darkorange);
+}
+  
+.modal-message {
+    text-transform: uppercase;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 32px;
+    color: #fff;
+}
+  
+.resume-container {
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0px 100px 0px;
+    animation: resume-up ease-out 1.5s forwards;
+    animation-delay: 3.5s;
+}
+  
+#sword {
+    width: 100px;
+    height: 100px;
+}
+  
+#resume {
+    text-decoration: none;
+    display: inline;
+    font-size: 0.7em;
+    padding: 20px;
+    background: rgb(124, 74, 74);
+    border-radius: 4%;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: "Press Start 2P", cursive;
+    border: 3px solid rgb(212, 168, 81);
+}
+  
+.fade-in span {
+    opacity: 0;
+    animation: text-fade 0.5s linear forwards;
+    animation-delay: 0.3s;
+}
+  
+.fade-in span:nth-of-type(2) {
+    animation-delay: 0.7s;
+}
+  
+.fade-in span:nth-of-type(3) {
+    animation-delay: 1.2s;
+}
+  
+.fade-in span:nth-of-type(4) {
+    animation-delay: 1.7s;
+}
+  
+.fade-in span:nth-of-type(5) {
+    animation-delay: 2.2s;
+}
+  
+.fade-in span:nth-of-type(6) {
+    animation-delay: 2.7s;
+}
+  
+.fade-in span:nth-of-type(7) {
+    animation-delay: 2.9s;
+}
+  
+@keyframes text-fade{
+    0% {
+      opacity: 0.1;
+  
+      transform: translateX(-100px);
+  
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+}
+  
+@keyframes resume-up {
+    from {
+      opacity: 0.1;
+      transform: translateY(100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+/* Photo section styles */
+.photo-section {
+    text-align: center;
+    margin: 20px;
+}
+
+.photo-section img {
+    max-width: 100%;
+    border-radius: 20%;
+    height: auto;
+}
+
+/* About Me section styles */
+
+.bio-section {
+    text-align: center;
+    margin: 30px;
+    padding: 20px;
+    background-color: var(--dark);
+    border: 3px solid var(--grey);
+    border-radius: 7%;
+    max-width: 600px;
+}
+
+@media only screen and (min-width: 800px) {
+    .bio-section {
+        max-width: 800px;
+    }
+}
+.bio-section h2 {
+    font-size: 30px;
+    color: var(--light);
+    max-width: 2000px;
+}
+
+.bio-section h2 .me {
+    color: var(--green);
+}
+
+.bio-section h4 {
+    color: var(--light);
+}
+
+.bio-section p {
+    font-size: 18px;
+    color: var(--light);
+    line-height: 1.5;
+}
+
+@media only screen and (min-width: 600px) {
+    .bio-section {
+        max-width: 800px; /* Adjust as needed for larger screens */
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    .bio-section {
+        max-width: 2000px; /* Adjust as needed for larger screens */
+    }
+}
+
+/* Info Cards Section Styles */
+.info-cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 20px;
+    max-width: 2000px;
+}
+
+.left-card h2, .right-card h2 {
+    color: var(--green);
+}
+.left-card, .right-card {
+    flex: 1;
+    text-align: center;
+    border: 3px solid var(--grey);
+    border-radius: 7%;
+    background-color: var(--dark);
+    padding: 20px;
+    margin: 10px;
+    max-width: 300px; /* Adjust the width as needed */
+}
+
+.left-card ul li, .right-card ul li {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    list-style: none;
+}
+
+.left-card, .right-card {
+    color: var(--light);
+}
+
+/* Work section styles */
+#work-section {
+    text-align: center;
+    margin: 20px;
+}
+
+.section-heading {
+    font-size: 28px;
+    color: var(--light);
+    margin-bottom: 20px;
+}
+
+/* Work Examples Container Styles */
+.work-examples-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Work Examples Styles */
+.work-section {
+    text-align: center;
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.work-sample1, .work-sample2, .work-sample3, .work-sample4 {
+    flex: 1 1 300px;
+    text-align: center;
+    position: relative;
+    overflow: hidden; /* Hide overflow to hide the <p> initially */
+    border-radius: 7%;
+    margin: 15px;
+}
+
+.work-sample1 img, .work-sample2 img, .work-sample3 img, .work-sample4 img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+    border-radius: inherit; /* Inherit the border-radius from the parent */
+}
+
+.work-sample1 p, .work-sample2 p, .work-sample3 p, .work-sample4 p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--light);
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.work-sample1:hover img, .work-sample2:hover img, .work-sample3:hover img, .work-sample4:hover img {
+    transform: scale(1.1);
+    box-shadow: 10px 10px lightblue;
+}
+
+.work-sample1:hover p, .work-sample2:hover p, .work-sample3:hover p, .work-sample4:hover p {
+    opacity: 1;
+}
+/* Contact section styles */
+footer {
+    background-color: var(--dark);
+    color: var(--light);
+    text-align: center;
+    padding: 20px 0;
+}
+
+#contact-section {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#contact-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#contact-section p {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+#contact-section a {
+    color: var(--green);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+#contact-section a:hover {
+    color: var(--purple-grey);
+}

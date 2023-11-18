@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Assets/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <title>My Portfolio</title>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Dane Larsen</h1>
+            <p>Web Developer & Designer</p>
+        </div>
+    
+        <nav class="navbar-container">
+            <ul id="navMenu" class="container">
+                <li><a id="resumeButton" href="Danes-Portfolio/Assets/resume.pdf">Resume</a></li>
+                <li><a href="#work-section">My Work</a></li>
+                <li><a href="#about-me">About Me</a></li>
+                <li><a href="#contact-section">Contact</a></li>
+            </ul>
+            <button id="toggleNav" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+    
+        </nav>
+    </header>
+    <!--modal-->
+    <div id="zeldaModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <div class="message-container fade-in">
+            <p class="modal-message">
+              <span>it's </span>
+              <span>dangerous </span>
+              <span>to </span>
+              <span>go </span>
+              <br>
+              <span>alone! </span>
+              <span>take </span>
+              <span>this.</span>
+            </p>
+          </div>
+          <div class="icon-container">
+            <img src="images/FIRE-PICTURE.png" id='flame-one' class="flame image">
+            <img src="images/Screenshot 2023-11-16 at 12.23.16 PM.png" class="image" id="old-man">
+            <img src="images/FIRE-PICTURE.png" id="flame-two" class="flame image">
+          </div>
+          <div class="resume-container">
+            <img id="sword" src="images/ZELDA-SWORD.png">
+            <a href="#" id="resume">My Resume</a>
+          </div>
+        </div>
+  
+    </div>
+    <main>
+        <section class="photo-section">
+            <!-- <img src="Screenshot 2023-11-07 at 11.20.31 AM.png" alt="Photo of Dane's Portfolio with purple backround and globe"> -->
+        </section>
+        <section id="about-me" class="container">
+            <div class="bio-section">
+            <h2>ABOUT <span class="me">ME</span></h2>
+            <h4>ALLOW ME TO INTRODUCE MYSELF </h4>
+            <p>
+                Welcome to my digital domain! At the age of 18, I've already conquered the towering heights of Kilimanjaro, the tallest freestanding mountain on the planet. This adventure taught me resilience, perseverance, and the importance of setting lofty goals.
+            </p>
+            <p>
+                Beyond the thrill of conquering nature's peaks, my journey extends into the digital realm as a passionate web developer. Despite my youth, I bring a wealth of intelligence and creativity to the table. I believe in the power of technology to shape the future, and I'm committed to being at the forefront of that evolution.
+            </p>
+            <p>
+                An early venture into independence saw me moving out at the age of 17. This experience cultivated in me a sense of dependability and adaptability, proving that I thrive even when faced with challenges alone. It's this adaptability that fuels my ability to navigate the complexities of coding and design with ease.
+            </p>
+            <p>
+                Join me on this journey of innovation and exploration. Together, let's push the boundaries of what's possible, whether it's scaling new heights or crafting groundbreaking digital experiences. Ready to embark on this adventure with me?
+            </p>
+         </div>
+    <section class="info-cards">
+     <div class="left-card">
+            <h2>THINGS I LOVE</h2>
+            <ul>
+                <li>Technology</li>
+                <li>The Gym</li>
+                <li>Drawing</li>
+                <li>My Family</li>
+                <li>Racing</li>
+                <li>Coding</li>
+            </ul>
+    </div>
+    <div class="right-card">
+         <h2>LOOK WHAT I CAN DO</h2>
+         <ul>
+            <li>--Learning--</li>
+            <li>CSS</li>
+            <li>HTML</li>
+            <li>JavaScript</li>
+        </ul>
+    </div>
+    <div class="left-card">
+        <h2>My Goals</h2>
+        <ul>
+            <li>Complete bootcamp</li>
+            <li>Always learn more</li>
+            <li>Master CSS</li>
+            <li>Master HTML</li>
+            <li>Master JavaScript</li>
+            <li>Get a coding job</li>
+        </ul>
+</div>
+<div class="right-card">
+     <h2>Design Tools</h2>
+     <ul>
+        <li>Figma</li>
+        <li>Font Awesome</li>
+        <li>Pen & Paper</li>
+        <li>Sketch</li>
+        <li>!MY MIND!</li>
+    </ul>
+</div>
+   </section>
+</section>
+
+<section id="work-section" class="container">
+    <h2 class="section-heading">My Work</h2>
+        
+    <div class="work-examples-container">
+        <div class="work-sample1">
+            <a href="http://127.0.0.1:5501/Horiseon/index.html" target="_blank">
+            <img src="images/digital-marketing-meeting.jpg" alt="Work Sample 1">
+        </a>
+            <h2>Horiseon</h2>
+            <!-- <p>Remodeling the website, Horiseon, was not just about giving it a 
+            fresh and modern look; it was an opportunity to dive deep into the 
+            principles of semantic HTML and harness the power of structured, meaningful 
+            markup. Semantic HTML involves using tags that carry inherent meaning, making
+             it not only beneficial for search engines but also significantly improving the 
+             overall accessibility and user experience of the website.</p> -->
+        <p>Took this broken website and reformatted, re-coded, and overall made this site easier for coders to navigate.</p>
+            </div>
+        <div class="work-sample2">
+            <a href="http://127.0.0.1:5501/Password-Gen/index.html" target="_blank">
+            <img src="images/lcoding ock picture.jpeg" alt="Picture of blue lock with hidden password.">
+        </a>
+            <h2>Java-Script Password Generator</h2>
+            <p>This password generator will create a passsword of your liking in a matter of seconds.</p>
+        </div>
+    </div>
+    <div class="work-examples-container">
+        <div class="work-sample3">
+            <a href="http://127.0.0.1:5501/prework-study-guide/index.html" target="_blank">
+            <img src="images/bowtie-cat-1.png" alt="Cat with bow-tie on">
+        </a>
+            <h2>Pre-Work StudyGuide</h2>
+            <p>This was my first ever project! It taught me the fundementals of CSS and HTML. It doesn't do much but it looks darn cute!</p>
+        </div>
+        <div class="work-sample4">
+            <img src="images/Under Construction.jpeg" alt="Under construction picture">
+            <h2>!!!!DANGER!!!!</h2>
+            <p>Why are you so eager for more?</p>
+        </div>
+    </div>
+</section>
+    
+</main>
+<footer>
+    <section id="contact-section" class="container">
+        <a href="#contact"></a>
+        <h2>Contact Me</h2>
+        <p>Email: <a href="mailto:danelarsen12@gmail.com">danelarsen12@gmail.com</a></p>
+        <p>Phone: 801-560-8796</p>
+        <p>GitHub: <a href="https://github.com/DaneLarsen1" target="_blank">DaneLarsen1</a></p>
+    </section>
+</footer>
+<script src="Assets/script.js"></script>
+<script src="Assets/model.js"></script>
+</body>
+</html>
