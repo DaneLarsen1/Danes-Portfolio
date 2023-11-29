@@ -14,15 +14,17 @@ body, h1, h2, p, ul, li {
 body {
     font-family: Arial, sans-serif;
     background-color:var(--purple-grey);
+    font-size: 20px;
 }
 
-@media only screen and (max-width: 600px) {
+/* @media only screen and (max-width: 600px) {
     body {
         font-size: 14px;
     }
-}
+} */
 .container {
-    max-width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
 }
 .navbar-container {
     display: flex;
@@ -44,6 +46,7 @@ header {
 }
 .header-content h1 {
     margin-bottom: 0;
+    font-size: 2em;
 }
 .header-content p {
     margin-top: 0;
@@ -252,7 +255,7 @@ nav.active {
       transform: translateY(0);
     }
 }
-/* Photo section styles */
+
 .photo-section {
     text-align: center;
     margin: 20px;
@@ -268,23 +271,25 @@ nav.active {
 
 .bio-section {
     text-align: center;
-    margin: 30px;
     padding: 20px;
     background-color: var(--dark);
     border: 3px solid var(--grey);
     border-radius: 7%;
-    max-width: 600px;
+    max-width: 1200px;
+    margin: 20px auto;
 }
 
-@media only screen and (min-width: 800px) {
-    .bio-section {
-        max-width: 800px;
+/* @media only screen and (min-width: 800px) {
+    body {
+        font-size: 16px;
     }
-}
+} */
 .bio-section h2 {
     font-size: 30px;
     color: var(--light);
     max-width: 2000px;
+    margin-top: 20px;
+    margin-bottom: 50px;
 }
 
 .bio-section h2 .me {
@@ -293,33 +298,38 @@ nav.active {
 
 .bio-section h4 {
     color: var(--light);
+    margin-bottom: 20px;
 }
 
 .bio-section p {
     font-size: 18px;
     color: var(--light);
-    line-height: 1.5;
+    line-height: 2;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 30px;
 }
 
 @media only screen and (min-width: 600px) {
     .bio-section {
-        max-width: 800px; /* Adjust as needed for larger screens */
+        max-width: 800px;
     }
 }
 
 @media only screen and (min-width: 800px) {
     .bio-section {
-        max-width: 2000px; /* Adjust as needed for larger screens */
+        max-width: 2000px; 
     }
 }
 
-/* Info Cards Section Styles */
+
 .info-cards {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-top: 20px;
-    max-width: 2000px;
+    margin: 20px auto;
+    max-width: 1200px;
+    margin-top: 50px;
 }
 
 .left-card h2, .right-card h2 {
@@ -333,43 +343,39 @@ nav.active {
     background-color: var(--dark);
     padding: 20px;
     margin: 10px;
-    max-width: 300px; /* Adjust the width as needed */
+    max-width: 300px; 
 }
 
 .left-card ul li, .right-card ul li {
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 20px;
     list-style: none;
+    text-align: left;
 }
 
 .left-card, .right-card {
     color: var(--light);
 }
 
-/* Work section styles */
 #work-section {
     text-align: center;
     margin: 20px;
     color: var(--light);
+    max-width: 1200px;
+    margin: 20px auto;
 }
 #work-section .section-heading {
-    color:var(--dark);
-    font-size: 35px;
-}
-.section-heading {
-    font-size: 28px;
-    color: var(--light);
-    margin-bottom: 20px;
+    color:var(--light);
+    font-size: 40px;
 }
 
-/* Work Examples Container Styles */
 .work-examples-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    max-width: 1200px;
+    margin: 20px auto;
 }
 
-/* Work Examples Styles */
 .work-section {
     text-align: center;
     margin: 20px;
@@ -379,19 +385,19 @@ nav.active {
 }
 
 .work-sample1, .work-sample2, .work-sample3, .work-sample4, .work-sample5, .work-sample6 {
-    flex: 1 1 300px;
+    flex: 1 1 auto;
     text-align: center;
     position: relative;
-    overflow: hidden; /* Hide overflow to hide the <p> initially */
+    overflow: hidden; 
     border-radius: 7%;
     margin: 15px;
 }
 
 .work-sample1 img, .work-sample2 img, .work-sample3 img, .work-sample4 img, .work-sample5 img, .work-sample6 img {
     width: 100%;
-    height: 250px;
     transition: transform 0.3s ease;
     border-radius: 5%; 
+    height: auto;
 }
 
 .work-sample1 p, .work-sample2 p, .work-sample3 p, .work-sample4 p, .work-sample5 p, .work-sample6 p {
@@ -411,11 +417,22 @@ nav.active {
     transform: scale(1.1);
     box-shadow: 10px 10px lightblue;
 }
-
+/* Note this media section cause it took me ages to learn.
+all the info you need is right here to recreate this image spacing  */
+@media only screen and (min-width: 800px) {
+    .work-examples-container {
+        flex-wrap: wrap; 
+        justify-content: space-between; 
+    }
+.work-sample1, .work-sample2, .work-sample3, .work-sample4, .work-sample5, .work-sample6 {
+        flex: 1 1 calc(50% - 20px); 
+        margin: 10px;
+    }
+}
 .work-sample1:hover p, .work-sample2:hover p, .work-sample3:hover p, .work-sample4:hover p, .work-sample5:hover p, .work-sample6:hover p {
     opacity: 1;
 }
-/* Contact section styles */
+
 footer {
     background-color: var(--dark);
     color: var(--light);
