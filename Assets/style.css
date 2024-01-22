@@ -12,48 +12,197 @@ body, h1, h2, p, ul, li {
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color:var(--purple-grey);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+h3 {
     font-size: 20px;
+}
+
+.line {
+    display: inline-block; 
+    margin: 0 10px; 
+    color: white;     
+    position: relative; 
+}
+
+.line::before {
+    content: ''; 
+    position: absolute;
+    left: 50%; 
+    top: -36px; 
+    transform: translateX(-50%); 
+    width: 9px;
+    height: calc(100% + 20px); 
+    background-color: #fff; 
+    height: 50px;
+}
+
+.highlight {
+    position:relative;
+    padding: 0 0.2em;
+    transition: background-color 0.3s;
+    z-index: 2;
+}
+
+.highlight::after {
+    content: '';
+    position:absolute;
+    left: 0;
+    right: 0;
+    bottom: -3px;
+    height: 20px;
+    background-color: #03a9f4;
+    transition: width 0.3s;;
+    left: 13px;
+    z-index: -1;
+    
+}
+
+.highlight:hover::after {
+    width: 100%;
 }
 
 .container {
     max-width: 1300px;
     margin: 0 auto;
 }
-.navbar-container {
+/* .navbar-container {
     display: flex;
     align-items: center;
+} */
+
+#vid {
+    position:absolute; 
+    top: 0;
+    left: 0;
+    width: 100vw; 
+    height: 100vh; 
+    overflow: hidden;
+    z-index: -10;
+    object-fit: cover; 
+}
+
+.vid video {
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.overlay {
+    position: absolute;
+    top: 0 ;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #03a9f4;
+    mix-blend-mode: overlay;
+}
+
+.text {
+    position: absolute; /* Absolute position relative to the nearest positioned ancestor */
+    top: 40%; /* Start at the vertical center */
+    left: 25%; 
+    transform: translate(-50%, -50%); /* Adjust to center the element */
+    color: white;
+    text-align: center; /* Center the text inside the div */
+    z-index: 10; /* Ensure it's above the background video */
+    max-width: 700px; /* Maximum width of the text block */
+    width: 100%; /* Full width to ensure centering works */
+    margin-left: calc(50vw - 50%);
+}
+
+.developer {
+    margin-left: 0; 
+}
+
+.text h2 {
+    font-size: 2em;
+    font-weight: 700;
+    line-height: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+.text h1 {
+    margin-left: 0; 
+    text-align: left; 
+}
+
+.text .description {
+    margin-top: 20px; 
+    text-align: left; 
+    max-width: 700px; 
+}
+
+.text p {
+    font-size: 1.1em;
+    font-weight: 400;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+.line::before {
+    width: 100%; /* Line to extend full width of the element */
+    /* Rest of your styles */
 }
 
 header {
-    background-color: var(--dark);
-    color: var(--light);
-    text-align: left;
+    color: white;
+    text-align: center;
     padding: 15px 30px;
-    display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 10;
+    position: relative;
 }
 .header-content {
-    display: column;
-    align-items: flex-start;
+    text-align: center;
 }
 .header-content h1 {
     margin-bottom: 0;
-    font-size: 2em;
+    font-size: 1em;
+    color: white;
 }
 .header-content p {
     margin-top: 0;
-    color: var(--green);
+    color: white;
 }
 
-/* This is me trying to make an invisible nav bar */
 #navMenu {
-    display: none;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
 }
 
-#navMenu.active {
+#navMenu a {
+color: white;
+text-decoration: none;
+border-bottom: 4px solid #03a9f4;
+padding-bottom: 3px;
+}
+
+/* #navMenu.active {
     display: block;
 }
 .navbar-burger {
@@ -107,9 +256,11 @@ nav ul.container li a {
 }
 nav.active {
     display: flex;
-}
-/* THIS IS THE MODAL THAT TOOK FOREVER BE CAREFUL! */
-.modal {
+} */
+
+
+
+/* .modal {
     display: none; 
     position: fixed; 
     z-index: 2; 
@@ -260,7 +411,7 @@ nav.active {
     max-width: 100%;
     border-radius: 20%;
     height: auto;
-}
+} */
 
 /* About Me section styles */
 
@@ -271,7 +422,8 @@ nav.active {
     border: 3px solid var(--grey);
     border-radius: 7%;
     max-width: 1200px;
-    margin: 20px auto;
+    /* margin: 20px auto; */
+    margin-top: 1000px;
 }
 
 .bio-section h2 {
