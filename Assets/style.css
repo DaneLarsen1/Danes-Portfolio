@@ -17,11 +17,6 @@ body {
     font-size: 20px;
 }
 
-/* @media only screen and (max-width: 600px) {
-    body {
-        font-size: 14px;
-    }
-} */
 .container {
     max-width: 1300px;
     margin: 0 auto;
@@ -30,7 +25,7 @@ body {
     display: flex;
     align-items: center;
 }
-/* Header styles and your customization  */
+
 header {
     background-color: var(--dark);
     color: var(--light);
@@ -279,11 +274,6 @@ nav.active {
     margin: 20px auto;
 }
 
-/* @media only screen and (min-width: 800px) {
-    body {
-        font-size: 16px;
-    }
-} */
 .bio-section h2 {
     font-size: 30px;
     color: var(--light);
